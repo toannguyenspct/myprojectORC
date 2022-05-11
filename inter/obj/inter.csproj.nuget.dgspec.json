@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\v1316\\source\\repos\\inter\\inter\\inter.csproj": {}
+    "D:\\techway\\myprojectORC\\inter\\inter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\v1316\\source\\repos\\inter\\inter\\inter.csproj": {
+    "D:\\techway\\myprojectORC\\inter\\inter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\v1316\\source\\repos\\inter\\inter\\inter.csproj",
+        "projectUniqueName": "D:\\techway\\myprojectORC\\inter\\inter.csproj",
         "projectName": "inter",
-        "projectPath": "C:\\Users\\v1316\\source\\repos\\inter\\inter\\inter.csproj",
-        "packagesPath": "C:\\Users\\v1316\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\v1316\\source\\repos\\inter\\inter\\obj\\",
+        "projectPath": "D:\\techway\\myprojectORC\\inter\\inter.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\techway\\myprojectORC\\inter\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\v1316\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -63,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
         }
       }
     }
