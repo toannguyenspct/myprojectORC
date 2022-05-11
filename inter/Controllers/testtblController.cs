@@ -33,5 +33,15 @@ namespace inter.Controllers
             itesttblService.Addtesttbl(testtbl);
             return View();
         }
+        public ActionResult Edit(int id) {
+            testtbl testtbl = itesttblService.GetById();
+            return View(testtbl);
+        }
+        [HttpPost]
+        public ActionResult Edit(testtbl testtbl)
+        {
+            itesttblService.Addtesttbl(testtbl);
+            return View();
+        }
     }
 }

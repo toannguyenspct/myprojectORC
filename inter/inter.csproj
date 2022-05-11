@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\testtbl\" />
+    <Folder Include="Views\HomeController1\" />
   </ItemGroup>
 
 </Project>
