@@ -10,8 +10,10 @@ namespace inter.Interface
     {
         IEnumerable<testtbl> GetALL();
 
-        testtbl GetById();
+        testtbl GetById(int id);
 
         void Addtesttbl(testtbl tbl);
+        void Edittesttbl(testtbl tbl);
+        void Deletetesttbl(testtbl tbl);
     }
 }

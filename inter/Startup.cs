@@ -27,9 +27,8 @@ namespace inter
             services.AddTransient<ItesttblService, testtblService>();
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddMvc().AddRazorPagesOptions(options => {
-                options.Conventions.AddPageRoute("testtbl/Index","");
+                options.Conventions.AddPageRoute("/testtbl/Index", "");
             });
-            //services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

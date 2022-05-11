@@ -12,7 +12,7 @@ namespace inter.Controllers
     public class testtblController : Controller
     {
         ItesttblService itesttblService;
-        private readonly string _connectionString;
+        
 
         public testtblController(ItesttblService _itesttblService)
         {
@@ -31,17 +31,28 @@ namespace inter.Controllers
         public ActionResult Create(testtbl testtbl)
         {
             itesttblService.Addtesttbl(testtbl);
-            return View();
+            return RedirectToAction(nameof(Index));
         }
         public ActionResult Edit(int id) {
-            testtbl testtbl = itesttblService.GetById();
+            testtbl testtbl = itesttblService.GetById(id);
             return View(testtbl);
         }
         [HttpPost]
         public ActionResult Edit(testtbl testtbl)
         {
-            itesttblService.Addtesttbl(testtbl);
-            return View();
+            itesttblService.Edittesttbl(testtbl);    
+            return RedirectToAction(nameof(Index));
+        }
+        public ActionResult Delete(int id)
+        {
+            testtbl testtbl = itesttblService.GetById(id);
+            return View(testtbl);
+        }
+        [HttpPost]
+        public ActionResult Delete(testtbl testtbl)
+        {
+            itesttblService.Deletetesttbl(testtbl);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

@@ -69,3 +69,6 @@ C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\inter.csproj.Cop
 C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\inter.dll
 C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\inter.pdb
 C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\inter.genruntimeconfig.cache
+C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\Razor\Views\testtbl\Create.cshtml.g.cs
+C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\Razor\Views\testtbl\Delete.cshtml.g.cs
+C:\Users\v1316\source\repos\inter\inter\obj\Debug\netcoreapp3.1\Razor\Views\testtbl\Edit.cshtml.g.cs

@@ -39,8 +39,27 @@ namespace inter.Service
             }
             return testtbls;
         }
-        public testtbl GetById() {
+        public testtbl GetById(int id) {
             testtbl testtbl = new testtbl();
+            using (OracleConnection con = new OracleConnection(_connectionString))
+            {
+                using (OracleCommand cmd = new OracleCommand())
+                {
+                    con.Open();
+                    cmd.BindByName = true;
+                    cmd.CommandText = "Select MASP,TENSP,SOLUONG FROM TESTTBL Where MASP="+id+"";
+                    OracleDataReader rdr = cmd.ExecuteReader();
+                    while (rdr.Read())
+                    {
+
+                        testtbl.MASP = Convert.ToInt32(rdr["MASP"]);
+                        testtbl.TENSP = rdr["TENSP"].ToString();
+                        testtbl.SOLUONG = Convert.ToInt32(rdr["SOLUONG"]);
+                       
+                       
+                    }
+                }
+            }
             return testtbl;
         }
         public void Addtesttbl(testtbl tbl)
@@ -53,6 +72,45 @@ namespace inter.Service
                     {
                         con.Open();
                         cmd.CommandText = "Insert into TESTTBL(MASP,TENSP,SOLUONG) values(" + tbl.MASP + ",'" + tbl.TENSP + "'," + tbl.SOLUONG + ")";
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+
+        public void Edittesttbl(testtbl tbl)
+        {
+            try
+            {
+                using (OracleConnection con = new OracleConnection(_connectionString))
+                {
+                    using (OracleCommand cmd = new OracleCommand())
+                    {
+                        con.Open();
+                        cmd.CommandText = "Update TESTTBL set MASP=" + tbl.MASP + ",TENSP="+tbl.TENSP+",SOLUONG="+tbl.SOLUONG+"where id="+tbl.MASP+"";
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+        public void Deletetesttbl(testtbl tbl)
+        {
+            try
+            {
+                using (OracleConnection con = new OracleConnection(_connectionString))
+                {
+                    using (OracleCommand cmd = new OracleCommand())
+                    {
+                        con.Open();
+                        cmd.CommandText = "Delete from TESTTBL where MASP="+tbl.MASP+"";
                         cmd.ExecuteNonQuery();
                     }
                 }
